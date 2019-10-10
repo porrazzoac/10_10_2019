@@ -2,9 +2,31 @@
 //
 
 #include <iostream>
+using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+	char fullname[100];
+	char *lastname = NULL;
+	
+	cout << "please enter your full name" << endl;
+	cin.getline(fullname, 100);
+
+	lastname = fullname;
+	
+
+	while (*lastname != ' ')
+	{
+		lastname++;
+	}
+	*lastname = '\0';
+	lastname++;
+	cout << fullname << endl;
+	cout << lastname << endl;
+
+
+
+	system("pause");
+	return 0;
 }
 
